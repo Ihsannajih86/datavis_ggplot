@@ -1,6 +1,6 @@
 ---
 title: "visualisasi data dengan ggplot2"
-author: "Muhammad Ihsan Najih Amani-Institut Teknologi Statistika dan Bisnis Muhammadiyah"
+author: "Muhammad Ihsan Najih Amani-Institut Teknologi Statistika dan Bisnis Muhammadiyah Semarang"
 date: "`r Sys.Date()`"
 output: 
   html_document:
@@ -126,14 +126,6 @@ ggplot(lizards, aes(x = total_length, y = weight)) +
 
 
 ```{r}
-
-```
-
-
-```{r}
-print('pengolahan data berdasarkan ')
-```
-```{r}
 library(readr)
 iris <- read_csv("iris.csv")
 View(iris)
@@ -154,3 +146,6 @@ plot(pressure)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 # Referensi
+-rmarkdown
+-open AI
+-kawa-kawa

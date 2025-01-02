@@ -1,5 +1,4 @@
 /* Pink theme for RMarkdown documents */
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #ffeef7; /* Soft pink background */
@@ -100,4 +99,35 @@ footer {
     padding: 1em 0;
     margin-top: 2em;
     font-size: 0.9em;
+}
+
+/* Tema pink */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec;
+    color: #333;
+}
+
+/* Sidebar with Miko's image */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #ffeef7;
+    border-right: 2px solid #ff99cc;
+    padding: 1em;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+    width: 100%; /* Make the image fit the sidebar */
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.content {
+    margin-left: 220px; /* Adjust to match sidebar width */
+    padding: 1em;
 }
