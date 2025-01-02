@@ -23,13 +23,29 @@ text-align: justify}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# R Markdown
+# 1.pengantar ggplot2
 
-laman ini saya buat untuk menampilkan hasil penggolahan data yang telah diolah untuk memudahkan pengunjung web ini memahami data dengan mudah.
+ggplot2 iku paket visualisasi data ing R sing ngadopsi konsep "Grammar of Graphics" sing dikembangake dening Leland Wilkinson. Konsep iki ngidini pangguna nggawe grafik kanthi nggabungake komponen-komponen grafis sing bisa disusun, kayata data, mapping estetis, geometri, statistik, koordinat, lan tema. Pendekatan iki nggawe proses nggawe grafik luwih fleksibel lan konsisten.
+ggplot2
 
-berikut hasil tampilan dari data yang telah saya olah dengan microsoft excel :
+Salah siji fitur utama ggplot2 yaiku kemampuan kanggo nggawe grafik sing kompleks kanthi sintaksis sing relatif sederhana. Pangguna bisa nambahake elemen-elemen grafis kaya titik, garis, histogram, lan liya-liyane kanthi gampang. Kajaba iku, ggplot2 nyedhiyakake kontrol sing apik kanggo kustomisasi tampilan grafik, kalebu warna, ukuran, lan tema, supaya grafik bisa disesuaikan karo kabutuhan analisis lan presentasi.
+Medium
 
+ggplot2 uga nduweni komunitas pangguna sing aktif lan dokumentasi sing lengkap, kalebu buku lan tutorial online, sing nggawe proses sinau lan nggunakake paket iki luwih gampang. Kanggo sing pengin sinau luwih lanjut, buku "ggplot2: Elegant Graphics for Data Analysis" dening Hadley Wickham nyedhiyakake pandhuan lengkap babagan cara nggunakake ggplot2 kanggo nggawe grafik sing efektif lan informatif. 
 
+# 2.Dasar-dasar Materi ggplot2
+## 2.1 kegunaan ggplot2
+`ggplot2 adhedhasar konsep "Grammar of Graphics" sing ngidini pangguna nggawe grafik kanthi nggabungake komponen-komponen grafis sing bisa disusun. Komponen utama ing ggplot2 kalebu:
+
+- **Data**: Dataset sing bakal dianalisis.
+- **Mapping Estetis**: Cara variabel ing data dipetakan menyang elemen visual kaya posisi, warna, ukuran, lan bentuk.
+- **Geometri (Geoms)**: Elemen visual sing ngwakili data, kayata titik (`geom_point()`), garis (geom_line()), histogram (geom_histogram()), lan liya-liyane.
+- **Statistik**: Transformasi data sing ditindakake sadurunge plotting, kayata agregasi utawa normalisasi.
+- **Koordinat**: Sistem koordinat sing digunakake kanggo nampilake data, kayata koordinat Cartesian standar utawa koordinat polar.
+- **Tema**: Kustomisasi tampilan grafik, kalebu elemen-elemen kaya latar mburi, gridlines, lan font.
+
+#  3.Berikut adalah contoh input dan outputnya:
+## 3.1 Berikut contoh implementasi plottitik
 ```{r}
 #muat library ggplot2
 library(ggplot2)
@@ -46,6 +62,10 @@ geom_point() +
   theme_dark()
 
 ```
+
+
+
+## 3.2 Berikut contoh implementasi Faceted Plot dengan 4 Warna
 ```{r}
 # Buat data frame
 data <- data.frame(
@@ -54,7 +74,7 @@ data <- data.frame(
   grup = sample(letters[1:4], 100, replace = TRUE)  # Kelompok: "a", "b", "c", "d"
 )
 
-# Plot dengan tema warna Yae Miko
+# Plot dengan tema 1 warna 
 library(ggplot2)
 
 ggplot(data, aes(x = x, y = y, color = grup)) +
@@ -68,12 +88,16 @@ ggplot(data, aes(x = x, y = y, color = grup)) +
   )) +
   theme_minimal() +
   labs(
-    title = "Faceted Plot dengan Warna Yae Miko",
+    title = "Faceted Plot dengan 4 Warna",
     x = "X",
     y = "Y"
   )
 
 ```
+
+
+
+#  4. Tampilan Read data Lizards.csv
 ```{r}
 library(readr)
 lizards <- read.csv("lizards.csv")
