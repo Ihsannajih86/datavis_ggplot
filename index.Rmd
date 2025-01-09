@@ -124,6 +124,25 @@ ggplot(lizards, aes(x = total_length, y = weight)) +
 
 ```
 
+```{r}
+# Load library ggplot2
+library(ggplot2)
+
+# Nggunakake ggplot kanggo plot data
+ggplot(lizards, aes(x = total_length,)) +
+  geom_bar(color = "pink", size = 3, alpha = 0.6) +  # Titik nganggo warna pink
+  labs(title = "Plot Titik - Lizard Data", x = "Total Length", y = "Weight") +
+  theme_minimal() +  # Tema minimalis
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold", color = "darkred"),  # Judul nganggo warna merah tua
+    axis.title = element_text(size = 12, color = "darkviolet"),  # Judul sumbu nganggo ungu
+    axis.text = element_text(color = "purple")  # Teks axis nganggo ungu
+  )
+
+```
+```
+
+
 
 ```{r}
 library(readr)
