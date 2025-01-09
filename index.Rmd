@@ -128,6 +128,35 @@ ggplot(lizards, aes(x = total_length, y = weight)) +
 # Load library ggplot2
 library(ggplot2)
 
+# Load data
+lizards <- read.csv("lizards.csv")
+
+# Display data
+View(lizards)
+
+# Use ggplot to plot data
+ggplot(lizards, aes(x = total_length, y = weight)) +
+  geom_jitter(color = "pink", size = 3, alpha = 0.6, width = 0.5, height = 0.5) +  # Use geom_jitter for spreading points
+  labs(title = "Plot Titik - Lizard Data", x = "Total Length", y = "Weight") +
+  theme_minimal() +  # Minimalist theme
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold", color = "darkred"),  # Title with dark red color
+    axis.title = element_text(size = 12, color = "darkviolet"),  # Axis titles with dark violet color
+    axis.text = element_text(color = "red")  # Axis text with red color
+  )
+
+```
+
+```{r}
+# Load library ggplot2
+library(ggplot2)
+
+# Ngeload data
+lizards <- read.csv("lizards.csv")
+
+# Tampilin data
+View(lizards)
+
 # Nggunakake ggplot kanggo plot data
 ggplot(lizards, aes(x = total_length,)) +
   geom_bar(color = "pink", size = 3, alpha = 0.6) +  # Titik nganggo warna pink
