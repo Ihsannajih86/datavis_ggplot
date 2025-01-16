@@ -134,15 +134,15 @@ lizards <- read.csv("lizards.csv")
 # Display data
 View(lizards)
 
-# Use ggplot to plot data
+# Use ggplot to plot data with jitter
 ggplot(lizards, aes(x = total_length, y = weight)) +
-  geom_jitter(color = "pink", size = 3, alpha = 0.6, width = 0.5, height = 0.5) +  # Use geom_jitter for spreading points
+  geom_jitter(color = "pink", size = 3, alpha = 0.6, width = 0.3, height = 0.3) +  # Use geom_jitter to spread points
   labs(title = "Plot Titik - Lizard Data", x = "Total Length", y = "Weight") +
   theme_minimal() +  # Minimalist theme
   theme(
     plot.title = element_text(hjust = 0.5, size = 16, face = "bold", color = "darkred"),  # Title with dark red color
     axis.title = element_text(size = 12, color = "darkviolet"),  # Axis titles with dark violet color
-    axis.text = element_text(color = "red")  # Axis text with red color
+    axis.text = element_text(color = "violet")  # Axis text with red color
   )
 
 ```
